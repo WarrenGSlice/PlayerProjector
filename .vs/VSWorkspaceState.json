@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\albums",
+    "\\src\\artists",
+    "\\src\\middleware",
+    "\\src\\services",
+    "\\src\\tracks"
+  ],
+  "SelectedNode": "\\src\\app.ts",
+  "PreviewInSolutionExplorer": false
+}
