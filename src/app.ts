@@ -1,6 +1,4 @@
 import express, { Request, Response} from 'express';
-import albumsRouter from './albums/albums.routes';
-import artistsRouter from './artists/artists.routes';
 import runningBackRouter from './runningbacks/runningbacks.routes';
 import helmet from 'helmet';
 import cors from 'cors';
@@ -37,7 +35,7 @@ app.get('/',(req: Request, res: Response) => {
     res.send('Player Projector HomePage');
 });
 
-app.use('/', [albumsRouter, artistsRouter, runningBackRouter]);
+app.use('/', [runningBackRouter]);
 
 // Start the application and listen for incoming requests on the specified port.
 app.listen(port, () => {
