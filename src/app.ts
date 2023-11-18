@@ -1,5 +1,7 @@
 import express, { Request, Response} from 'express';
 import runningBackRouter from './runningbacks/runningbacks.routes';
+import statRouter from './stats/stats.routes';
+import playerRouter from './players/players.routes';
 import helmet from 'helmet';
 import cors from 'cors';
 import logger from './middleware/logger.middleware';
@@ -35,7 +37,7 @@ app.get('/',(req: Request, res: Response) => {
     res.send('Player Projector HomePage');
 });
 
-app.use('/', [runningBackRouter]);
+app.use('/', [runningBackRouter],[playerRouter], [statRouter]);
 
 // Start the application and listen for incoming requests on the specified port.
 app.listen(port, () => {

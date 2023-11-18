@@ -24,5 +24,5 @@ export interface Stats {
     recYpc: number,
     recTd: number,
     fum: number,
-    lost: number
+    lost: number,
 }
