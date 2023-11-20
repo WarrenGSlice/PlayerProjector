@@ -1,6 +1,6 @@
 import { createPool, Pool } from "mysql";
 let pool: Pool | null = null;
-const usePort = process.env.PORT || 19;
+const usePort = process.env.PORT || 3306;
 
 
 const initializeMySqlConnector = () => {
