@@ -12,7 +12,7 @@ dotenv.config(/*{ path: './.env'}*/);
 // Create an instance of the Express application.
 const app = express();
 // Set the port number for the application.
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 //const port = 3000;
 
 app.use(cors());
