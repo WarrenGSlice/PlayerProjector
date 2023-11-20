@@ -13,7 +13,7 @@ export const StatQueries = {
                 att AS att, rush_yd AS rushYd, rush_ypc AS rushYpc, rush_td AS rushTd, 
                 tar AS tar, rec AS rec, rec_yd AS recYd, rec_ypt AS recYpt, 
                 rec_ypc AS recYpc, rec_td AS recTd, fum AS fum, lost AS lost
-        FROM playerprojector.careerstats
+        FROM heroku_2d306ce687fb51a.careerstats
     `,
     readStatsById:`
         SELECT playerId as playerId, name AS name, img AS img, current_team AS currentTeam, 
@@ -22,8 +22,8 @@ export const StatQueries = {
                 att AS att, rush_yd AS rushYd, rush_ypc AS rushYpc, rush_td AS rushTd, 
                 tar AS tar, rec AS rec, rec_yd AS recYd, rec_ypt AS recYpt, 
                 rec_ypc AS recYpc, rec_td AS recTd, fum AS fum, lost AS lost
-        FROM playerprojector.careerstats
-        WHERE playerprojector.careerstats.playerId = ?
+        FROM heroku_2d306ce687fb51a.careerstats
+        WHERE heroku_2d306ce687fb51a.careerstats.playerId = ?
         `,
     readStatsByName:`
         SELECT playerId as playerId, name AS name, img AS img, current_team AS currentTeam, 
@@ -32,11 +32,11 @@ export const StatQueries = {
             att AS att, rush_yd AS rushYd, rush_ypc AS rushYpc, rush_td AS rushTd, 
             tar AS tar, rec AS rec, rec_yd AS recYd, rec_ypt AS recYpt, 
             rec_ypc AS recYpc, rec_td AS recTd, fum AS fum, lost AS lost
-        FROM playerprojector.careerstats
-        WHERE playerprojector.careerstats.name = ?
+        FROM heroku_2d306ce687fb51a.careerstats
+        WHERE heroku_2d306ce687fb51a.careerstats.name = ?
         `,
     updateStat:`
-            UPDATE playerprojector.careerstats
+            UPDATE heroku_2d306ce687fb51a.careerstats
             SET name = ?, img =?, current_team = ?, age = ?, height = ?, weight = ?, 
                 exp = ?, college = ?, year = ?, team = ?, gp = ?, points = ?, rank = ?, 
                 att = ?, rush_yd = ?, rush_ypc = ?, rush_td = ?, tar = ?, rec = ?, 
@@ -44,7 +44,7 @@ export const StatQueries = {
             WHERE id = ?
     `,
     deleteStat:`
-        DELETE FROM playerprojector.careerstats
+        DELETE FROM heroku_2d306ce687fb51a.careerstats
         WHERE playerId = ?
         `,
 }

@@ -27,10 +27,10 @@ app.use(helmet());
 
 console.log(process.env.MY_SQL_DB_HOST);
 
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV == 'production') {
     //add logger middleware
     app.use(logger);
-    console.log(process.env.GREETING + ' in dev mode')
+    console.log(process.env.GREETING + ' in production mode')
 }
 
 app.get('/',(req: Request, res: Response) => {

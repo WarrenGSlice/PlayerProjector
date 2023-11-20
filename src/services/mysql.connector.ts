@@ -33,6 +33,7 @@ const initializeMySqlConnector = () => {
         throw new Error('failed to initialize pool');
     }
 };
+
 export const execute = <T>(query: string, params: string[] | Object): Promise<T> => {
     try {
         if (!pool) {

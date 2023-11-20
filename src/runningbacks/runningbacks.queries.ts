@@ -9,7 +9,7 @@ export const runningBackQueries = {
           100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
           40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
           PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame
-        FROM playerprojector.runningbacks
+        FROM heroku_2d306ce687fb51a.runningbacks
         `,
     readRunningBacksById:`
         SELECT
@@ -21,8 +21,8 @@ export const runningBackQueries = {
             100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
             40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
             PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame 
-        FROM playerprojector.runningbacks
-        WHERE playerprojector.runningbacks.RB_ID = ?
+        FROM heroku_2d306ce687fb51a.runningbacks
+        WHERE heroku_2d306ce687fb51a.runningbacks.RB_ID = ?
         `,
     readRunningBacksByName:`
         SELECT
@@ -34,8 +34,8 @@ export const runningBackQueries = {
             100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
             40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
             PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame 
-        FROM playerprojector.runningbacks
-        WHERE playerprojector.runningbacks.NAME = ?
+        FROM heroku_2d306ce687fb51a.runningbacks
+        WHERE heroku_2d306ce687fb51a.runningbacks.NAME = ?
         `,
     readRunningBacksBySearchTerm:`
         SELECT
@@ -47,8 +47,8 @@ export const runningBackQueries = {
             100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
             40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
             PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame 
-        FROM playerprojector.runningbacks
-        WHERE playerprojector.runningbacks.NAME LIKE ?
+        FROM heroku_2d306ce687fb51a.runningbacks
+        WHERE heroku_2d306ce687fb51a.runningbacks.NAME LIKE ?
         `,
     readRunningBacksByAttempts:`
         SELECT
@@ -60,7 +60,7 @@ export const runningBackQueries = {
             100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
             40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
             PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame 
-        FROM playerprojector.runningbacks
+        FROM heroku_2d306ce687fb51a.runningbacks
         ORDER BY RUSH_ATTEMPTS DESC
         `,
     readRunningBacksByPoints:`
@@ -73,7 +73,7 @@ export const runningBackQueries = {
             100_YARD_GAME as hundredGame, 200_YARD_GAME as twoHundredGame, 40_YARD_PLAY as fourtyPlay,
             40_YARD_TDS as fourtyTd, PASS_COMPLETED as passComp, PASS_YARDS as passYards,
             PASS_TDS as passTds, TARGET_SHARE as targetShare, POINTS_GAME as pointsGame 
-        FROM playerprojector.runningbacks
+        FROM heroku_2d306ce687fb51a.runningbacks
         ORDER BY POINTS DESC
         `,
     createRunningBack:`
@@ -84,7 +84,7 @@ export const runningBackQueries = {
         VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         `,
     updateRunningBack:`
-        UPDATE playerprojector.runningbacks
+        UPDATE heroku_2d306ce687fb51a.runningbacks
         SET RANK = ?, NAME = ?, TEAM = ?, BYE_WEEK = ?, POINTS = ?, RUSH_ATTEMPTS = ?, 
             RUSH_YARDS = ?, RUSH_TDS = ?, RECEPTIONS = ?, REC_YARDS = ?, REC_TDS = ?, FUM = ?, 
             FUM_LOST = ?, FIRST_DOWNS = ?, 100_YARD_GAME = ?, 200_YARD_GAME = ?, 40_YARD_PLAY = ?, 40_YARD_TDS = ?, 
@@ -92,7 +92,7 @@ export const runningBackQueries = {
         WHERE RB_ID = ?
         `,
     deleteRunningBack:`
-        DELETE FROM playerprojector.runningbacks
+        DELETE FROM heroku_2d306ce687fb51a.runningbacks
         WHERE RB_ID = ?
         `,
 };
