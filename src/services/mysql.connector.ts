@@ -1,6 +1,7 @@
 import { createPool, Pool } from "mysql";
 let pool: Pool | null = null;
 
+
 const initializeMySqlConnector = () => {
     try {
 
@@ -8,7 +9,7 @@ const initializeMySqlConnector = () => {
             connectionLimit:
                 parseInt(process.env.MY_SQL_DB_CONNECTION_LIMIT != undefined ? process.env.MY_SQL_DB_CONNECTION_LIMIT : ""),
             port:
-                parseInt(process.env.MY_SQL_DB_PORT != undefined ? process.env.MY_SQL_DB_PORT : ""),
+                parseInt(process.env.PORT != undefined ? process.env.PORT : ""),
             host: process.env.MY_SQL_DB_HOST,
             user: process.env.MY_SQL_DB_USER,
             password: process.env.MY_SQL_DB_PASSWORD,

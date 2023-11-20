@@ -22,10 +22,6 @@
             "value" : "58b00561",
             "required" : "true"
         },
-        "MY_SQL_DB_PORT" : {
-            "value" : "3306",
-            "required" : "true"
-        },
         "MY_SQL_DB_DATABASE" : {
             "value" : "heroku_2d306ce687fb51a",
             "required" : "true"
