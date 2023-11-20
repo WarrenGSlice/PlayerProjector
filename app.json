@@ -1,0 +1,55 @@
+{
+    "name": "Player Projector API",
+    "description" : "Is the API for the Player Projector App",
+    "website" : "https://player-projector-api-1c353704e7f9.herokuapp.com/",
+    "respository" : "https://github.com/WarrenGSlice/PlayerProjector",
+    "success_url": "/",
+    "scripts": {
+        "start:watch": "nodemon ./src/app.ts",
+        "start": "npx ts-node ./src/app.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "env" : {
+        "MY_SQL_DB_HOST" : {
+            "value" : "us-cdbr-east-06.cleardb.net",
+            "required" : "true"
+        },
+        "MY_SQL_DB_USER" : {
+            "value" : "bc96ab8d610338",
+            "required" : "true"
+        },
+        "MY_SQL_DB_PASSWORD" : {
+            "value" : "58b00561",
+            "required" : "true"
+        },
+        "MY_SQL_DB_PORT" : {
+            "value" : "3306",
+            "required" : "true"
+        },
+        "MY_SQL_DB_DATABASE" : {
+            "value" : "heroku_2d306ce687fb51a",
+            "required" : "true"
+        },
+        "MY_SQL_DB_CONNECTION_LIMIT" : {
+            "value" : "10",
+            "required" : "true"
+        },
+        "PORT" : {
+            "value" : "5000",
+            "required" : "true"
+        },
+        "NODE_ENV" : {
+            "value" : "development",
+            "required" : "true"
+        },
+        "GREETING" : {
+            "value" : "hello from heroku",
+            "required" : "true"
+        }
+    },
+    "buildpacks": [
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest"
+        }
+    ]
+}
