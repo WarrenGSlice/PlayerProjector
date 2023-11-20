@@ -30,14 +30,6 @@
             "value" : "10",
             "required" : "true"
         },
-        "PORT" : {
-            "value" : "5000",
-            "required" : "true"
-        },
-        "NODE_ENV" : {
-            "value" : "development",
-            "required" : "true"
-        },
         "GREETING" : {
             "value" : "hello from heroku",
             "required" : "true"
