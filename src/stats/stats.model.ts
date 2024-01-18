@@ -12,7 +12,7 @@ export interface Stats {
     team: string,
     gp: number,
     points: number,
-    rank: number,
+    ranking: number,
     att: number,
     rushYd: number,
     rushYpc: number,

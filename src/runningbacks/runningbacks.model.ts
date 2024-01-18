@@ -1,6 +1,6 @@
 export interface RunningBack {
     rbId: number,
-    rank: number,
+    ranking: number,
     name: string,
     team: string,
     byeWeek: number,

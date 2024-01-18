@@ -10,7 +10,7 @@ export const readStats = async () => {
 export const createStat = async (stats: Stats) => {
     return execute<OkPacket>(StatQueries.createStat,
         [stats.name, stats.img, stats.currentTeam, stats.age, stats.height, stats.weight, stats.exp,
-            stats.college, stats.year, stats.team, stats.gp, stats.points,stats.rank, stats.att, stats.rushYd,
+            stats.college, stats.year, stats.team, stats.gp, stats.points,stats.ranking, stats.att, stats.rushYd,
             stats.rushYpc, stats.rushTd, stats.tar, stats.rec, stats.recYd, stats.recYpt, stats.recYpc,
             stats.recTd, stats.fum, stats.lost]);
 };
@@ -18,7 +18,7 @@ export const createStat = async (stats: Stats) => {
 export const updateStat = async (stats: Stats) => {
     return execute<OkPacket>(StatQueries.updateStat,
         [stats.name, stats.img, stats.currentTeam, stats.age, stats.height, stats.weight, stats.exp, 
-            stats.college, stats.year, stats.team, stats.gp, stats.points, stats.rank, stats.att, stats.rushYd,
+            stats.college, stats.year, stats.team, stats.gp, stats.points, stats.ranking, stats.att, stats.rushYd,
             stats.rushYpc, stats.rushTd, stats.tar, stats.rec, stats.recYd, stats.recYpt, stats.recYpc, 
             stats.recTd, stats.fum, stats.lost, stats.playerId])
 };

@@ -11,19 +11,19 @@
     },
     "env" : {
         "MY_SQL_DB_HOST" : {
-            "value" : "us-cdbr-east-06.cleardb.net",
+            "value" : "bhxhr5tkthkjr1rbfskg-mysql.services.clever-cloud.com",
             "required" : "true"
         },
         "MY_SQL_DB_USER" : {
-            "value" : "bc96ab8d610338",
+            "value" : "uisu3n0utrjk2ua8",
             "required" : "true"
         },
         "MY_SQL_DB_PASSWORD" : {
-            "value" : "58b00561",
+            "value" : "94tfoAfk4W3NxRK82csS",
             "required" : "true"
         },
         "MY_SQL_DB_DATABASE" : {
-            "value" : "heroku_2d306ce687fb51a",
+            "value" : "bhxhr5tkthkjr1rbfskg",
             "required" : "true"
         },
         "MY_SQL_DB_CONNECTION_LIMIT" : {
@@ -35,7 +35,7 @@
             "required" : "true"
         },
         "NODE_ENV" : {
-            "value" : "development",
+            "value" : "production",
             "required" : "true"
         },
         "GREETING" : {

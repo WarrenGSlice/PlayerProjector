@@ -29,7 +29,7 @@ export const readRunningBacksByPoints = async () => {
 
 export const createRunningBack = async (runningback: RunningBack) => {
     return execute<OkPacket>(runningBackQueries.createRunningBack,
-        [runningback.rank, runningback.name, runningback.team, runningback.byeWeek,
+        [runningback.ranking, runningback.name, runningback.team, runningback.byeWeek,
         runningback.points, runningback.rushAttempts, runningback.rushYards, runningback.rushTds,
         runningback.recs, runningback.recYards, runningback.recTds, runningback.fum, runningback.fumLost,
         runningback.firstDowns, runningback.hundredGame, runningback.twoHundredGame, runningback.fourtyPlay,
@@ -39,7 +39,7 @@ export const createRunningBack = async (runningback: RunningBack) => {
 
 export const updateRunningBack = async (runningback: RunningBack) => {
     return execute<OkPacket>(runningBackQueries.updateRunningBack,
-        [runningback.rank, runningback.name, runningback.team, runningback.byeWeek, runningback.points,
+        [runningback.ranking, runningback.name, runningback.team, runningback.byeWeek, runningback.points,
         runningback.rushAttempts, runningback.rushYards, runningback.rushTds, runningback.recs,
         runningback.recYards, runningback.recTds, runningback.fum, runningback.fumLost, runningback.firstDowns, 
         runningback.hundredGame, runningback.twoHundredGame, runningback.fourtyPlay,
